@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0b1929;
+    color: #e8dfcd;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    background: rgba(11, 25, 41, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .card-surface {
+    background: #faf8f5;
+    color: #13293d;
+    border-radius: 1rem;
+  }
+  .btn-primary {
+    background: #0d867e;
+    color: #fff;
+    transition: all 0.2s ease;
+  }
+  .btn-primary:hover {
+    background: #0e6a64;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 134, 126, 0.3);
+  }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(11, 25, 41, 0.15);
+    color: #13293d;
+    transition: all 0.2s ease;
+  }
+  .btn-ghost:hover {
+    background: rgba(11, 25, 41, 0.05);
+    border-color: rgba(11, 25, 41, 0.3);
+  }
+  .chip {
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .chip-inactive {
+    background: rgba(11, 25, 41, 0.06);
+    color: #3a5a85;
+  }
+  .chip-inactive:hover {
+    background: rgba(11, 25, 41, 0.1);
+  }
+  .chip-active {
+    background: #0d867e;
+    color: #fff;
+  }
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  border-radius: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.leaflet-popup-content {
+  margin: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #13293d;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #13293d;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a5a85;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5376a3;
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  background: linear-gradient(90deg, rgba(11,25,41,0.06) 25%, rgba(11,25,41,0.12) 50%, rgba(11,25,41,0.06) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}

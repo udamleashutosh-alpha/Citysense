@@ -1,0 +1,70 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        navy: {
+          50: '#eef2f7',
+          100: '#d4dde8',
+          200: '#a9bbd1',
+          300: '#7e98ba',
+          400: '#5376a3',
+          500: '#3a5a85',
+          600: '#2d4566',
+          700: '#1f3050',
+          800: '#13293d',
+          900: '#0b1929',
+          950: '#060e18',
+        },
+        teal: {
+          50: '#effcf9',
+          100: '#cbf7ef',
+          200: '#98eee0',
+          300: '#5ddccd',
+          400: '#2bc4b8',
+          500: '#14a89d',
+          600: '#0d867e',
+          700: '#0e6a64',
+          800: '#115351',
+          900: '#134544',
+          950: '#042726',
+        },
+        sand: {
+          50: '#fdfbf7',
+          100: '#faf8f5',
+          200: '#f3eee3',
+          300: '#e8dfcd',
+          400: '#d4c6aa',
+          500: '#bda782',
+        },
+        accent: {
+          amber: '#f59e0b',
+          coral: '#f87171',
+          green: '#22c55e',
+        },
+      },
+      fontFamily: {
+        display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.4s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
+      },
+      keyframes: {
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        slideDown: { '0%': { opacity: '0', transform: 'translateY(-10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.95)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
+        pulseSoft: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0.6' } },
+        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+      },
+    },
+  },
+  plugins: [],
+};
